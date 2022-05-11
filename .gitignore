@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+
+#ReconROS
+build.sw/
+build.hw/
+build.msg/
