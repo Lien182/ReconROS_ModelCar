@@ -1,8 +1,9 @@
 extern "C" {
 #include "reconos_thread.h"
 #include "reconos_calls.h"
-}
 
+#include "../application/axi_modelcar.h"
+}
 #define DEBUG_LANE_CONTROL 0
 
 
@@ -12,6 +13,9 @@ THREAD_ENTRY() {
 	
         #warning TODO
         double MAX_VEL = 1.0;
+
+
+        t_axi_modelcar *axi_modelcar = axi_modelcar_init(0xA0000000);
 
         while(1)
         {

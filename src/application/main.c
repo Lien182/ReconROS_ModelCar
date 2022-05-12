@@ -13,10 +13,11 @@
 #include <string.h>
 #include <unistd.h>
 
+#include "memory.h"
+#include "axi_modelcar.h"
+
 #include "main.h"
 
-#define DEFAULT_IMAGE_HEIGHT 1024
-#define DEFAULT_IMAGE_WIDTH  1280
 
 
 void init_msg(void)
@@ -40,6 +41,9 @@ int main(int argc, char **argv)
 	reconos_app_init();
 
 	init_msg();
+
+	
+
 
 	signal(SIGINT, exit_signal);
 	signal(SIGTERM, exit_signal);
